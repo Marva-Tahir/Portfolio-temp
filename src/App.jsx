@@ -308,7 +308,7 @@ export default function App() {
   const [copiedEmail, setCopiedEmail] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('kai@valentine-creative.io');
+    navigator.clipboard.writeText('marwah@example.com');
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2500);
   };
@@ -400,7 +400,7 @@ export default function App() {
               </div>
             </div>
             <div>
-              <span className="font-extrabold tracking-wider text-sm sm:text-base text-zinc-100 block group-hover:text-purple-300 transition-colors">KAI VALENTINE</span>
+              <span className="font-extrabold tracking-wider text-sm sm:text-base text-zinc-100 block group-hover:text-purple-300 transition-colors">MARWAH WAHEED</span>
               <span className="text-[10px] tracking-widest uppercase font-medium text-purple-400/80 block">UI/UX & Brand Director</span>
             </div>
           </motion.button>
@@ -551,7 +551,7 @@ export default function App() {
                     </motion.h1>
 
                     <motion.p variants={fadeUp} className="text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-                      Hello! I'm <span className="text-zinc-100 font-medium">Kai Valentine</span>, a multi-disciplinary UI/UX and Graphic Designer.
+                      Hello! I'm <span className="text-zinc-100 font-medium">Marwah Waheed</span>, a multi-disciplinary UI/UX and Graphic Designer.
                       I bridge the gap between human intuition and elegant software systems—designing high-impact digital products, immersive web architectures, and boundary-pushing brands.
                     </motion.p>
 
@@ -631,7 +631,7 @@ export default function App() {
                           {/* Name tag */}
                           <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs backdrop-blur-md bg-black/60 px-3.5 py-2 rounded-xl border border-purple-500/20">
                             <div>
-                              <p className="font-semibold text-white">Kai Valentine</p>
+                              <p className="font-semibold text-white">Marwah Waheed</p>
                               <p className="text-[10px] text-purple-400">Principal Design Consultant</p>
                             </div>
                             <div className="flex items-center gap-1 text-[11px] font-mono text-zinc-400">
@@ -942,183 +942,178 @@ export default function App() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
             >
+              {/* ── Top: About Me + Contact Info side by side ── */}
               <Reveal>
-                <div className="max-w-3xl mb-12">
-                  <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-purple-400 font-semibold mb-2">
-                    <Mail className="w-3.5 h-3.5" /> Direct Contact & Channels
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+
+                  {/* About Me – left col */}
+                  <div className="lg:col-span-7 space-y-5">
+                    <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-purple-400 font-semibold">
+                      <Sparkles className="w-3.5 h-3.5" /> About Me
+                    </div>
+                    <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
+                      Marwah Waheed
+                    </h1>
+                    <p className="text-zinc-400 text-base sm:text-lg leading-relaxed max-w-2xl">
+                      I'm a multi-disciplinary UI/UX and Graphic Designer passionate about crafting meaningful digital experiences. I specialize in design systems, mobile UI, and brand identity — blending aesthetic precision with functional clarity.
+                    </p>
+                    <p className="text-zinc-500 text-sm leading-relaxed max-w-2xl">
+                      With a background spanning enterprise SaaS, fintech, and luxury branding, I bring a holistic perspective to every project — from early research and wireframes to polished, pixel-perfect interfaces. I believe great design should feel invisible: intuitive, effortless, and human.
+                    </p>
+                    <div className="flex flex-wrap gap-2 pt-1">
+                      {['UI/UX Design', 'Design Systems', 'Brand Identity', 'Figma', 'Prototyping', 'Motion Design'].map((tag) => (
+                        <span key={tag} className="px-3 py-1 rounded-full text-xs font-medium bg-purple-950/50 border border-purple-800/40 text-purple-300">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">Get In Touch</h1>
-                  <p className="text-zinc-400 text-base sm:text-lg mt-3 leading-relaxed">
-                    Skip the forms. Reach out directly through your preferred channel for collaborations, design advisory, speaking engagements, or new client inquiries.
-                  </p>
+
+                  {/* Contact Info – right col */}
+                  <div className="lg:col-span-5 p-7 rounded-3xl bg-[#0b0b14] border border-purple-900/40 flex flex-col justify-between space-y-6">
+                    <div>
+                      <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-purple-400 font-semibold mb-4">
+                        <Mail className="w-3.5 h-3.5" /> Contact Info
+                      </div>
+                      <div className="space-y-4 text-sm">
+                        <div className="flex items-start gap-3">
+                          <div className="p-2 rounded-xl bg-purple-950/50 text-purple-400 border border-purple-800/30 mt-0.5">
+                            <Mail className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-zinc-500 text-xs uppercase font-mono mb-0.5">Email</div>
+                            <div className="font-semibold text-white">marwah@example.com</div>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="p-2 rounded-xl bg-purple-950/50 text-purple-400 border border-purple-800/30 mt-0.5">
+                            <MessageCircle className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-zinc-500 text-xs uppercase font-mono mb-0.5">WhatsApp</div>
+                            <div className="font-semibold text-white">+92 300 0000000</div>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="p-2 rounded-xl bg-purple-950/50 text-purple-400 border border-purple-800/30 mt-0.5">
+                            <MapPin className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-zinc-500 text-xs uppercase font-mono mb-0.5">Location</div>
+                            <div className="font-semibold text-white">Lahore, Pakistan</div>
+                            <div className="text-zinc-500 text-xs">Available for remote work globally</div>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="p-2 rounded-xl bg-purple-950/50 text-purple-400 border border-purple-800/30 mt-0.5">
+                            <Clock className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-zinc-500 text-xs uppercase font-mono mb-0.5">Working Hours</div>
+                            <div className="font-semibold text-white">Mon – Fri · 10:00 AM – 7:00 PM (PKT)</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-3.5 rounded-2xl bg-purple-950/30 border border-purple-800/30 flex items-center gap-2 text-xs">
+                      <span className="h-2 w-2 rounded-full bg-emerald-400 animate-ping flex-shrink-0" />
+                      <span className="text-zinc-300 font-medium">Currently open for new projects & collaborations</span>
+                    </div>
+                  </div>
                 </div>
               </Reveal>
 
-              {/* Contact Cards */}
-              <motion.div
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-                variants={stagger}
-                initial="hidden"
-                animate="show"
-              >
-                {/* Email */}
-                <motion.div variants={fadeUp} whileHover={{ y: -4 }} className="p-7 rounded-3xl bg-[#0b0b14] border border-purple-900/40 hover:border-purple-600/50 transition-all flex flex-col justify-between group shadow-xl">
-                  <div>
-                    <motion.div
-                      className="w-12 h-12 rounded-2xl bg-purple-950/60 border border-purple-800/40 flex items-center justify-center text-purple-400 mb-6"
-                      whileHover={{ scale: 1.15, rotate: 5 }}
-                    >
-                      <Mail className="w-6 h-6" />
-                    </motion.div>
-                    <span className="text-xs font-mono uppercase text-purple-400 font-semibold tracking-wider">Direct Email</span>
-                    <h3 className="text-xl font-bold text-white mt-1 mb-2">kai@valentine-creative.io</h3>
-                    <p className="text-xs text-zinc-400 leading-relaxed">Fastest way to get in touch. Typically replies within 24–48 hours for new commissions and advisory roles.</p>
-                  </div>
-                  <div className="pt-6 mt-6 border-t border-purple-950/60 flex items-center gap-2">
-                    <a
-                      href="mailto:kai@valentine-creative.io"
-                      className="flex-1 py-2.5 px-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-semibold text-center transition-colors flex items-center justify-center gap-1.5"
-                    >
-                      <span>Write Email</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
-                    </a>
-                    <motion.button
-                      onClick={handleCopyEmail}
-                      className="p-2.5 rounded-xl bg-[#131322] border border-purple-900/50 hover:border-purple-500/50 text-zinc-300 hover:text-white transition-all flex items-center justify-center"
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <AnimatePresence mode="wait">
-                        {copiedEmail
-                          ? <motion.span key="check" initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}><Check className="w-4 h-4 text-emerald-400" /></motion.span>
-                          : <motion.span key="copy" initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}><Copy className="w-4 h-4" /></motion.span>
-                        }
-                      </AnimatePresence>
-                    </motion.button>
-                  </div>
-                </motion.div>
-
-                {/* Discovery Call */}
-                <motion.div variants={fadeUp} whileHover={{ y: -4 }} className="p-7 rounded-3xl bg-gradient-to-br from-[#120e24] via-[#0b0b14] to-[#07070a] border border-purple-700/40 hover:border-purple-500 transition-all flex flex-col justify-between group shadow-xl">
-                  <div>
-                    <motion.div
-                      className="w-12 h-12 rounded-2xl bg-indigo-950/60 border border-indigo-700/40 flex items-center justify-center text-indigo-300 mb-6"
-                      whileHover={{ scale: 1.15, rotate: -5 }}
-                    >
-                      <Calendar className="w-6 h-6" />
-                    </motion.div>
-                    <span className="text-xs font-mono uppercase text-indigo-400 font-semibold tracking-wider">Video Consultation</span>
-                    <h3 className="text-xl font-bold text-white mt-1 mb-2">Book a 1:1 Intro Call</h3>
-                    <p className="text-xs text-zinc-400 leading-relaxed">Have a detailed scope ready? Reserve a 30-minute discovery call to discuss requirements, feasibility, and timelines.</p>
-                  </div>
-                  <div className="pt-6 mt-6 border-t border-purple-950/60">
-                    <a
-                      href="https://calendly.com"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="w-full py-2.5 px-4 rounded-xl bg-[#161426] border border-purple-600/40 hover:bg-purple-600 hover:text-white text-purple-300 text-xs font-semibold transition-all flex items-center justify-center gap-2"
-                    >
-                      <span>Schedule 30-Min Call</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
-                  </div>
-                </motion.div>
-
-                {/* Messaging */}
-                <motion.div variants={fadeUp} whileHover={{ y: -4 }} className="p-7 rounded-3xl bg-[#0b0b14] border border-purple-900/40 hover:border-purple-600/50 transition-all flex flex-col justify-between group shadow-xl">
-                  <div>
-                    <motion.div
-                      className="w-12 h-12 rounded-2xl bg-purple-950/60 border border-purple-800/40 flex items-center justify-center text-purple-400 mb-6"
-                      whileHover={{ scale: 1.15, rotate: 5 }}
-                    >
-                      <MessageCircle className="w-6 h-6" />
-                    </motion.div>
-                    <span className="text-xs font-mono uppercase text-purple-400 font-semibold tracking-wider">Instant Messaging</span>
-                    <h3 className="text-xl font-bold text-white mt-1 mb-2">Telegram & WhatsApp</h3>
-                    <p className="text-xs text-zinc-400 leading-relaxed">Available for quick project check-ins, asynchronous design feedback, and urgent sprint queries.</p>
-                  </div>
-                  <div className="pt-6 mt-6 border-t border-purple-950/60 flex items-center gap-2">
-                    <a href="https://t.me" target="_blank" rel="noreferrer" className="flex-1 py-2.5 px-4 rounded-xl bg-[#131322] border border-purple-900/50 hover:border-purple-500/50 text-zinc-200 text-xs font-semibold text-center transition-all hover:text-white">Telegram</a>
-                    <a href="https://wa.me" target="_blank" rel="noreferrer" className="flex-1 py-2.5 px-4 rounded-xl bg-[#131322] border border-purple-900/50 hover:border-purple-500/50 text-zinc-200 text-xs font-semibold text-center transition-all hover:text-white">WhatsApp</a>
-                  </div>
-                </motion.div>
-              </motion.div>
-
-              {/* Location + Socials */}
+              {/* ── Action Cards: Gmail + WhatsApp ── */}
               <Reveal delay={0.1}>
-                <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8">
-                  {/* Location */}
-                  <div className="lg:col-span-5 p-7 rounded-3xl bg-[#0b0b14] border border-purple-900/40 flex flex-col justify-between space-y-6">
-                    <div>
-                      <h3 className="text-lg font-bold text-white mb-1">Location & Office Hours</h3>
-                      <p className="text-xs text-zinc-400">Collaborating globally with distributed product & engineering teams.</p>
-                    </div>
-                    <div className="space-y-4 text-xs">
-                      {[
-                        { icon: MapPin, label: 'San Francisco, California', sub: 'SoMa Design District · United States' },
-                        { icon: Clock, label: 'Active Working Hours', sub: 'Mon – Fri: 09:00 AM – 06:00 PM (PST / UTC-8)' },
-                        { icon: Globe2, label: 'Remote Flexibility', sub: 'Overlap available with EST, GMT, and JST time zones' },
-                      ].map(({ icon: Icon, label, sub }) => (
-                        <motion.div key={label} className="flex items-start gap-3" whileHover={{ x: 4 }} transition={{ type: 'spring', stiffness: 300 }}>
-                          <div className="p-2 rounded-xl bg-purple-950/50 text-purple-400 border border-purple-800/30">
-                            <Icon className="w-4 h-4" />
-                          </div>
-                          <div>
-                            <div className="font-semibold text-white">{label}</div>
-                            <div className="text-zinc-500">{sub}</div>
-                          </div>
+                <div className="mb-6">
+                  <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-purple-400 font-semibold mb-6">
+                    <ArrowRight className="w-3.5 h-3.5" /> Reach Out Directly
+                  </div>
+                  <motion.div
+                    className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl"
+                    variants={stagger}
+                    initial="hidden"
+                    animate="show"
+                  >
+                    {/* Gmail Card */}
+                    <motion.div
+                      variants={fadeUp}
+                      whileHover={{ y: -4 }}
+                      className="p-7 rounded-3xl bg-[#0b0b14] border border-purple-900/40 hover:border-purple-600/50 transition-all flex flex-col justify-between group shadow-xl"
+                    >
+                      <div>
+                        <motion.div
+                          className="w-12 h-12 rounded-2xl bg-red-950/40 border border-red-800/30 flex items-center justify-center text-red-400 mb-5"
+                          whileHover={{ scale: 1.15, rotate: 5 }}
+                        >
+                          {/* Gmail icon */}
+                          <svg viewBox="0 0 24 24" className="w-6 h-6" fill="currentColor">
+                            <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+                          </svg>
                         </motion.div>
-                      ))}
-                    </div>
-                    <div className="p-4 rounded-2xl bg-purple-950/30 border border-purple-800/30 flex items-center justify-between text-xs">
-                      <span className="text-zinc-300 font-medium flex items-center gap-2">
-                        <span className="h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
-                        Currently accepting Q3/Q4 contracts
-                      </span>
-                      <span className="text-purple-400 font-mono text-[11px]">Open Status</span>
-                    </div>
-                  </div>
+                        <span className="text-xs font-mono uppercase text-red-400 font-semibold tracking-wider">Gmail</span>
+                        <h3 className="text-lg font-bold text-white mt-1 mb-1">Send an Email</h3>
+                        <p className="text-xs text-zinc-400 leading-relaxed">Open Gmail directly to send a message. Replies within 24–48 hours.</p>
+                      </div>
+                      <div className="pt-5 mt-5 border-t border-purple-950/60 flex items-center gap-2">
+                        <a
+                          href="https://mail.google.com/mail/?view=cm&to=marwah@example.com"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="flex-1 py-2.5 px-4 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-semibold text-center transition-colors flex items-center justify-center gap-1.5"
+                        >
+                          <span>Open Gmail</span>
+                          <ArrowUpRight className="w-3.5 h-3.5" />
+                        </a>
+                        <motion.button
+                          onClick={handleCopyEmail}
+                          className="p-2.5 rounded-xl bg-[#131322] border border-purple-900/50 hover:border-purple-500/50 text-zinc-300 hover:text-white transition-all flex items-center justify-center"
+                          whileTap={{ scale: 0.9 }}
+                          title="Copy email"
+                        >
+                          <AnimatePresence mode="wait">
+                            {copiedEmail
+                              ? <motion.span key="check" initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}><Check className="w-4 h-4 text-emerald-400" /></motion.span>
+                              : <motion.span key="copy" initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}><Copy className="w-4 h-4" /></motion.span>
+                            }
+                          </AnimatePresence>
+                        </motion.button>
+                      </div>
+                    </motion.div>
 
-                  {/* Socials */}
-                  <div className="lg:col-span-7 p-7 rounded-3xl bg-[#0b0b14] border border-purple-900/40 space-y-6">
-                    <div>
-                      <h3 className="text-lg font-bold text-white mb-1">Design Networks & Profiles</h3>
-                      <p className="text-xs text-zinc-400">Browse live source files, design tokens, micro-interactions, and visual explorations.</p>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      {[
-                        { name: 'Figma Community', desc: 'UI Kits & Free Design Systems', Icon: FigmaIcon, url: '#' },
-                        { name: 'Dribbble', desc: 'Micro-interactions & Daily Shots', Icon: DribbbleIcon, url: '#' },
-                        { name: 'LinkedIn', desc: 'Professional History & Advisory', Icon: LinkedinIcon, url: '#' },
-                        { name: 'GitHub', desc: 'Design Tokens & React UI Components', Icon: GithubIcon, url: '#' },
-                        { name: 'Instagram', desc: 'Branding, Typography & 3D Renders', Icon: InstagramIcon, url: '#' },
-                        { name: 'Behance', desc: 'Full-length Brand Identity Portfolios', Icon: Palette, url: '#' },
-                      ].map((platform) => {
-                        const Icon = platform.Icon;
-                        return (
-                          <motion.a
-                            key={platform.name}
-                            href={platform.url}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="p-4 rounded-2xl bg-[#11111d] border border-purple-950/70 hover:border-purple-600/50 hover:bg-[#161626] transition-all flex items-center justify-between group"
-                            whileHover={{ x: 4 }}
-                            transition={{ type: 'spring', stiffness: 300 }}
-                          >
-                            <div className="flex items-center gap-3">
-                              <div className="w-9 h-9 rounded-xl bg-purple-950/60 border border-purple-800/30 flex items-center justify-center text-purple-400 group-hover:text-purple-300 group-hover:scale-105 transition-all">
-                                <Icon className="w-4 h-4" />
-                              </div>
-                              <div>
-                                <div className="text-xs font-bold text-white group-hover:text-purple-300 transition-colors">{platform.name}</div>
-                                <div className="text-[11px] text-zinc-500 truncate max-w-[150px]">{platform.desc}</div>
-                              </div>
-                            </div>
-                            <ArrowUpRight className="w-4 h-4 text-zinc-600 group-hover:text-purple-400 transition-all" />
-                          </motion.a>
-                        );
-                      })}
-                    </div>
-                  </div>
+                    {/* WhatsApp Card */}
+                    <motion.div
+                      variants={fadeUp}
+                      whileHover={{ y: -4 }}
+                      className="p-7 rounded-3xl bg-[#0b0b14] border border-purple-900/40 hover:border-purple-600/50 transition-all flex flex-col justify-between group shadow-xl"
+                    >
+                      <div>
+                        <motion.div
+                          className="w-12 h-12 rounded-2xl bg-green-950/40 border border-green-800/30 flex items-center justify-center text-green-400 mb-5"
+                          whileHover={{ scale: 1.15, rotate: -5 }}
+                        >
+                          {/* WhatsApp icon */}
+                          <svg viewBox="0 0 24 24" className="w-6 h-6" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                          </svg>
+                        </motion.div>
+                        <span className="text-xs font-mono uppercase text-green-400 font-semibold tracking-wider">WhatsApp</span>
+                        <h3 className="text-lg font-bold text-white mt-1 mb-1">Chat on WhatsApp</h3>
+                        <p className="text-xs text-zinc-400 leading-relaxed">Quick queries, project check-ins, and urgent feedback — available during working hours.</p>
+                      </div>
+                      <div className="pt-5 mt-5 border-t border-purple-950/60">
+                        <a
+                          href="https://wa.me/923000000000"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="w-full py-2.5 px-4 rounded-xl bg-green-600 hover:bg-green-500 text-white text-xs font-semibold transition-all flex items-center justify-center gap-2"
+                        >
+                          <span>Open WhatsApp</span>
+                          <ArrowUpRight className="w-3.5 h-3.5" />
+                        </a>
+                      </div>
+                    </motion.div>
+                  </motion.div>
                 </div>
               </Reveal>
             </motion.div>
@@ -1238,7 +1233,7 @@ export default function App() {
             <div className="md:col-span-5 space-y-4">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-purple-600 to-indigo-600 flex items-center justify-center text-white font-extrabold text-sm shadow-md shadow-purple-600/30">K</div>
-                <span className="font-extrabold text-white tracking-wider text-base">KAI VALENTINE</span>
+                <span className="font-extrabold text-white tracking-wider text-base">MARWAH WAHEED</span>
               </div>
               <p className="text-xs sm:text-sm text-zinc-400 max-w-sm leading-relaxed">
                 A modern digital portfolio crafted for Graphic Designers, Product Visionaries, and UI/UX Engineers. Deep obsidian aesthetics powered by neon violet clarity.
@@ -1275,7 +1270,7 @@ export default function App() {
           </div>
 
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
-            <div>© {new Date().getFullYear()} Kai Valentine. All Rights Reserved.</div>
+            <div>© {new Date().getFullYear()} Marwah Waheed. All Rights Reserved.</div>
             <motion.button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="flex items-center gap-1.5 text-zinc-400 hover:text-purple-300 transition-colors"
